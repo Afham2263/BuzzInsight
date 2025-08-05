@@ -18,7 +18,7 @@
 
 ## Demo
 
-[Insert hosted Streamlit Cloud or video demo link here]
+[https://buzz-insight.streamlit.app/]
 
 ---
 

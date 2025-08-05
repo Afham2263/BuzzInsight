@@ -1,11 +1,15 @@
+import os
 import praw
 import pandas as pd
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def get_reddit_posts(query: str, limit: int = 100) -> pd.DataFrame:
     reddit = praw.Reddit(
-        client_id="F8cmDkkYtdBMEmeNr5FaXg",
-        client_secret="um97McZhsjo-cs-6gw7gTDN7Wr9P6Q",
-        user_agent="PulseBoardApp by Afham"
+        client_id=os.getenv("REDDIT_CLIENT_ID"),
+        client_secret=os.getenv("REDDIT_CLIENT_SECRET"),
+        user_agent=os.getenv("REDDIT_USER_AGENT")
     )
 
     results = []

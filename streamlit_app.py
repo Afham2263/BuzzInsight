@@ -3,20 +3,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 from datetime import datetime
-from dotenv import load_dotenv
 
 from utils.extractor import get_reddit_posts
 from utils.analyzer import analyze_sentiment
 from utils.summarizer import generate_summary
 
-load_dotenv()
-
 st.set_page_config(
     page_title="BuzzInsight - Public Sentiment Dashboard",
     layout="wide"
 )
-
-
 
 st.markdown(
     """

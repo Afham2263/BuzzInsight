@@ -1,15 +1,12 @@
-import os
 import praw
 import pandas as pd
-from dotenv import load_dotenv
-
-load_dotenv()
+import streamlit as st
 
 def get_reddit_posts(query: str, limit: int = 100) -> pd.DataFrame:
     reddit = praw.Reddit(
-        client_id=os.getenv("REDDIT_CLIENT_ID"),
-        client_secret=os.getenv("REDDIT_CLIENT_SECRET"),
-        user_agent=os.getenv("REDDIT_USER_AGENT")
+        client_id=st.secrets["REDDIT_CLIENT_ID"],
+        client_secret=st.secrets["REDDIT_CLIENT_SECRET"],
+        user_agent=st.secrets["REDDIT_USER_AGENT"]
     )
 
     results = []

@@ -49,7 +49,7 @@ BuzzInsight/
 ├── .env                   # API keys (excluded from Git)
 ├── .gitignore
 ├── requirements.txt
-├── streamlit\_app.py       # Main Streamlit application
+├── streamlit_app.py       # Main Streamlit application
 
 ````
 
